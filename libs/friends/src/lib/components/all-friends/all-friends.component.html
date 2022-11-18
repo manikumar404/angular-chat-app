@@ -1,0 +1,18 @@
+<ng-container *ngIf="users">
+  <p-accordion>
+    <p-accordionTab header="{{user.name}}" *ngFor="let user of users" >
+
+      <ng-container *ngIf="user.message">
+        <ng-container *ngFor="let message of user.message">
+          <p *ngFor="let msg of message.messages">
+            {{msg}}
+          </p>
+        </ng-container>
+      </ng-container>
+
+    </p-accordionTab>
+
+  </p-accordion>
+
+</ng-container>
+

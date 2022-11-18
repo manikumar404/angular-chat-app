@@ -2,7 +2,14 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "api": "apps/api",
+    "auth": "libs/auth",
+    "chat": "libs/chat",
     "chat-app": "apps/chat-app",
-    "chat-app-e2e": "apps/chat-app-e2e"
+    "chat-app-e2e": "apps/chat-app-e2e",
+    "friends": "libs/friends",
+    "profile": "libs/profile",
+    "shared-header": "libs/shared/header",
+    "shared-services": "libs/shared/services"
   }
 }

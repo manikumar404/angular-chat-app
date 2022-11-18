@@ -10,11 +10,38 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@chat-app-fe/auth": [
+        "libs/auth/src/index.ts"
+      ],
+      "@chat-app-fe/chat": [
+        "libs/chat/src/index.ts"
+      ],
+      "@chat-app-fe/friends": [
+        "libs/friends/src/index.ts"
+      ],
+      "@chat-app-fe/profile": [
+        "libs/profile/src/index.ts"
+      ],
+      "@chat-app-fe/shared/header": [
+        "libs/shared/header/src/index.ts"
+      ],
+      "@chat-app-fe/shared/services": [
+        "libs/shared/services/src/index.ts"
+      ]
+    },
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

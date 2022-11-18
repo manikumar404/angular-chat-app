@@ -5,15 +5,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/chat-app",
         "index": "apps/chat-app/src/index.html",
         "main": "apps/chat-app/src/main.ts",
         "polyfills": "apps/chat-app/src/polyfills.ts",
         "tsConfig": "apps/chat-app/tsconfig.app.json",
-        "assets": ["apps/chat-app/src/favicon.ico", "apps/chat-app/src/assets"],
-        "styles": ["apps/chat-app/src/styles.css"],
+        "assets": [
+          "apps/chat-app/src/favicon.ico",
+          "apps/chat-app/src/assets"
+        ],
+        "styles": [
+          "apps/chat-app/src/styles.css",
+          "node_modules/primeicons/primeicons.css",
+          "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+          "node_modules/primeng/resources/primeng.min.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -70,12 +80,17 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/chat-app/**/*.ts", "apps/chat-app/**/*.html"]
+        "lintFilePatterns": [
+          "apps/chat-app/**/*.ts",
+          "apps/chat-app/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/chat-app"],
+      "outputs": [
+        "coverage/apps/chat-app"
+      ],
       "options": {
         "jestConfig": "apps/chat-app/jest.config.ts",
         "passWithNoTests": true

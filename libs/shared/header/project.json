@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/shared/header/src",
+  "prefix": "chat-app-fe",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/header"],
+      "options": {
+        "jestConfig": "libs/shared/header/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/header/**/*.ts",
+          "libs/shared/header/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

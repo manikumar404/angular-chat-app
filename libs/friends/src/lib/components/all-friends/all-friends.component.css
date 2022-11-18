@@ -1,0 +1,7 @@
+:host ::ng-deep .p-accordion p {
+  line-height: 1.5;
+  margin: 0;
+}
+.ui-accordion-content-wrapper-overflown {
+  overflow: hidden;
+}
